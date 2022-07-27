@@ -1,0 +1,5 @@
+#1609b4 - blue
+#e1e0e5 - grey
+#ffffff - white
+#000000 - black
+#969eea - light blue

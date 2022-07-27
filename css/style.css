@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header{
+    width: 100vw;
+    display: flex;
+    padding: 1rem 1rem;
+}
+.first-block{
+    display: flex;
+    width: fit-content;
+    justify-content: space-between;
+    width: 40%;
+}
+.list{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+#ham{
+    width: 30px;
+    height: 30px;
+}
+#ham>img{
+    width: 100%;
+    height: 100%;
+}
+.items{
+    list-style: none;
+}
+.items>a{
+    text-decoration: none;
+    color: #25224f;
+    position: relative;
+}
+nav{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    color: #25224f;
+    font-size: 1.7rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    /* text-align: left; */
+}
+
+.ham-btn{
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+.items>a::after{
+    transition: all .3s ease-in-out;
+    content: '';
+    width: 0;
+    display: block;
+    height: 2px;
+    background-color: #25224f;
+    position: absolute;
+    top: 100%;
+}
+.items>a:hover::after{
+    width: 100%;
+}
+
+.ham-btn:hover{
+    transform: scale(1.1);
+}
+
+
+/* section 1 */
+.welcome{
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+}
+
+.left-box, .right-box{
+    color: #25224f;
+    width: 50%;
+}
+
+.left-box>img{
+    width: 100%;
+}
+
+.social-links, .social-links>img{
+    width: 30px;
+}
+
+.right-head{
+    font-size: 2rem;
+    margin: 1.5rem 0;
+}
+
+.right-box{
+    line-height: 2rem;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.social-links{
+    margin-right: 1rem;
+}
+
+.socials{
+    margin: 1rem 0;
+}
+.socials a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    header{
+        flex-direction: column;
+    }
+    .ham-btn{
+        display: block;
+    }
+    .first-block{
+        width: 100%;
+    }
+    .list{
+        flex-direction: column;
+        margin-top: .5rem;
+    }
+    .items{
+        margin: .5rem;
+    }
+    nav{
+        height: 200px;
+        transition: .2s ease-in-out height;
+        overflow: hidden;
+        background-color: aliceblue;
+    }
+    .close{
+        height: 0;
+    }
+    .logo{
+    text-align: left;
+    }
+}
